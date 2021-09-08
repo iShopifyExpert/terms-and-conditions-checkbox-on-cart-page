@@ -4,3 +4,26 @@
       {{ 'cart.general.terms_html' | t: url: settings.terms_url }}
     </p>
 </label>
+<style>
+.cart-drawer__footer__terms {
+    display: flex;
+    align-items: center;
+}
+#js-terms {
+    margin-right: 5px;
+}
+</style>
+
+settings_schema.json
+
+{
+  "type": "url",
+  "id": "terms_url",
+  "label": "Link to terms page"
+}
+
+"cart": {
+    "general": {
+      "terms_html": "Jeg accepterer <a href=\"{{url}}\" class=\"Link Link--underlineNative\" target=\"_blank\">Handelsbetingelserne<\/a>",
+    },
+}
